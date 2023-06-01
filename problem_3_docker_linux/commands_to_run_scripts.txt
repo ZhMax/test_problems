@@ -1,0 +1,28 @@
+#Запуск контейнера uc из образа ubuntu 
+docker run -it --name uc ubuntu
+
+#Из командной строки контейнера создаются директории /root/test и /root/results
+
+#Затем текстовый файл и скрипты копируются в директорию /root/test при помощи команды
+#docker cp
+
+#Из командной строки контейнера (docker exec -it uc /bin/bash) даются разрешения на исполнение скриптов,
+#где текущая директория есть /root/test
+
+chmod +x ./script_for_words_count.sh
+chmod +x ./script_for_files_creation.sh
+
+#В случае использования для написания скриптов Notepad++ мне для запуска скриптов также 
+#также дополнительно понадобилось выполнить
+sed -i -e 's/\r$//' script_for_words_count.sh
+sed -i -e 's/\r$//' script_for_files_creation.sh
+
+
+#Командная строка контейнера закрывается и выполняются команды для запущенного контейнера
+
+#Скрипт для подсчета повторений слов в текстовом файле dracula.txt
+docker exec uc root/test/script_for_words_count.sh /root/test/dracula.txt /root/results
+
+#Скрипт для создания пустых файлов с именами 10 самых встречаемых слов
+docker exec uc root/test/script_for_files_creation.sh /root/results/dracula_unique_words.txt /root/test
+
