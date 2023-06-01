@@ -7,9 +7,7 @@ problem_1_time_series
 Код находится в jupyter notebook
 rocket_classification.ipynb
 
-При запуске кода dataset Ham
-https://www.timeseriesclassification.com/description.php?Dataset=Ham
-необходимо поместить в папку datasets
+Папка datasets содержит dataset Ham, используемый для решения.
 
 Решение второго задания находится в папке
 problem_2_graphs
