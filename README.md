@@ -3,11 +3,9 @@
 
 ### Первое задание
 
-Решение первого задания находится в папке: `problem_1_time_series`
-
-Код находится в jupyter notebook: `rocket_classification.ipynb`
-
-Папка `datasets` содержит dataset Ham, используемый для решения.
+Решение первого задания находится в папке: `problem_1_time_series`.  
+Код находится в jupyter notebook: `rocket_classification.ipynb`.  
+Папка `datasets` содержит dataset Ham, используемый для решения.  
 
 
 ### Второе задание
